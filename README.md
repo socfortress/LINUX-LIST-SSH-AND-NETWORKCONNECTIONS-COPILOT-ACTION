@@ -1,6 +1,6 @@
 ## List-SSH-Network-Connections.sh
 
-This script lists all active TCP and UDP network connections on the system, providing a JSON-formatted output for integration with security tools like OSSEC/Wazuh.
+This script lists all active TCP and UDP network connections on the system, providing a JSON-formatted output for integration with your SIEM.
 
 ### Overview
 
