@@ -1,10 +1,10 @@
-## List SSH Network Connections
+## List-SSH-Network-Connections.sh
 
 This script lists all active TCP and UDP network connections on the system, providing a JSON-formatted output for integration with security tools like OSSEC/Wazuh.
 
 ### Overview
 
-The `List-SSH-Network-Connections` script uses `netstat` to enumerate all network connections, collecting protocol, local and remote addresses, state, and associated process information. Output is formatted as JSON for active response workflows.
+The `List-SSH-Network-Connections.sh` script uses `netstat` to enumerate all network connections, collecting protocol, local and remote addresses, state, and associated process information. Output is formatted as JSON for active response workflows.
 
 ### Script Details
 
@@ -21,7 +21,7 @@ The `List-SSH-Network-Connections` script uses `netstat` to enumerate all networ
 
 #### Command Line Execution
 ```bash
-./List-SSH-Network-Connections
+./List-SSH-Network-Connections.sh
 ```
 
 #### Parameters
@@ -29,7 +29,7 @@ The `List-SSH-Network-Connections` script uses `netstat` to enumerate all networ
 | Parameter | Type | Default Value | Description |
 |-----------|------|---------------|-------------|
 | `ARLog`   | string | `/var/ossec/active-response/active-responses.log` | Path for active response JSON output |
-| `LogPath` | string | `/tmp/List-SSH-Network-Connections-script.log` | Path for detailed execution logs |
+| `LogPath` | string | `/tmp/List-SSH-Network-Connections.sh-script.log` | Path for detailed execution logs |
 | `LogMaxKB` | int | 100 | Maximum log file size in KB before rotation |
 | `LogKeep` | int | 5 | Number of rotated log files to retain |
 
@@ -60,7 +60,7 @@ The `List-SSH-Network-Connections` script uses `netstat` to enumerate all networ
 {
   "timestamp": "2025-07-18T10:30:45.123Z",
   "host": "HOSTNAME",
-  "action": "List-SSH-Network-Connections",
+  "action": "List-SSH-Network-Connections.sh",
   "data": {
     "connections": [
       {
@@ -108,7 +108,7 @@ The `List-SSH-Network-Connections` script uses `netstat` to enumerate all networ
 #### Debugging
 Enable verbose logging:
 ```bash
-VERBOSE=1 ./List-SSH-Network-Connections
+VERBOSE=1 ./List-SSH-Network-Connections.sh
 ```
 
 ### Contributing
